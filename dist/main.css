@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: grayscale;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    background-color: #FFF6FF;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+}
+ul{
+    display: flex;
+    gap: 2rem;
+    font-family: sans-serif;
+    font-size: 2rem;
+}
+a{
+    text-decoration: none;
+    color: #3A2A46;
+}
+a::after{
+    content: '';
+    display: block;
+    border: 1px solid #8F00FF;
+    transform-origin: center;
+    transform:scaleX(0);
+    transition: transform 0.3s;
+}
+a:hover{
+    color:blue;
+}
+a:hover::after{
+    transform:scaleX(1);
+}
